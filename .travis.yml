@@ -12,7 +12,7 @@ env:
     - IMAGE_NAME=diuis/docker-emsdk-opencv3-installed-bin
 
 script:
-  - docker build . --quiet -t "$IMAGE_NAME"
+  - docker build . -t "$IMAGE_NAME"
 
 before_deploy:
   - docker login -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
